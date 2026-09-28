@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>amazee.io to Upsun migration — teqqr</title>
+  <meta name="description" content="Zero-downtime amazee.io to Upsun migrations for Drupal and WordPress, with automated config translation, content parity checks and visual regression testing.">
+  <meta name="theme-color" content="#0e1628">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e1628'/%3E%3Cpolyline points='11,9 19,16 11,23' fill='none' stroke='%235aa6ff' stroke-width='3.4' stroke-linecap='square'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="page">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="teqqr home">
+        <span class="brand__prompt" aria-hidden="true">❯</span><span>teqqr</span><span class="brand__caret" aria-hidden="true"></span>
+      </a>
+      <nav class="site-header__actions" aria-label="Primary">
+        <a class="header-link" href="index.html#migrations">All migrations</a>
+        <a class="header-cta" href="#contact">Book a consult</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page__main" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero hero--migration" aria-labelledby="hero-title">
+      <div class="bg-grid" data-par="0.5" aria-hidden="true"></div>
+      <div class="bg-dots" data-par="1.4" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__kicker">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Migration / amazee.io → Upsun</span>
+          </p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line"><span>amazee.io to Upsun<span class="hero__punct">,</span></span></span>
+            <span class="hero__line hero__line--dim"><span>rehearsed until</span></span>
+            <span class="hero__line hero__line--dim"><span>it's second nature.</span></span>
+          </h1>
+          <p class="hero__lede">I've moved Drupal and WordPress estates off amazee.io more times than I can count — so I built tooling that does the risky, repetitive parts automatically and proves the new site matches the old one before anyone touches DNS.</p>
+          <div class="hero__actions">
+            <a class="btn btn--bright" href="#contact">Plan my migration</a>
+            <p class="hero__note">30 min · bring your repo URL</p>
+          </div>
+        </div>
+
+        <figure class="code-card platform-map" aria-label="Platform mapping, amazee.io to Upsun">
+          <div class="code-card__bar" aria-hidden="true">
+            <span>platform.map</span><span>auto-translated</span>
+          </div>
+          <div class="platform-map__route">
+            <p class="route-box"><span class="route-box__label">From</span> <span class="route-box__name">amazee.io</span></p>
+            <span class="route-flow" aria-hidden="true"></span>
+            <p class="route-box route-box--to"><span class="route-box__label">To</span> <span class="route-box__name">Upsun</span></p>
+          </div>
+          <ul class="platform-map__rows">
+            <li class="map-row">
+              <span class="map-row__key">config</span>
+              <s class="map-row__from">.lagoon.yml</s>
+              <span class="map-row__arrow" aria-hidden="true">→</span>
+              <span class="visually-hidden">becomes</span>
+              <span class="map-row__to">.upsun/config.yaml</span>
+            </li>
+            <li class="map-row">
+              <span class="map-row__key">cli</span>
+              <s class="map-row__from">lagoon</s>
+              <span class="map-row__arrow" aria-hidden="true">→</span>
+              <span class="visually-hidden">becomes</span>
+              <span class="map-row__to">upsun</span>
+            </li>
+            <li class="map-row">
+              <span class="map-row__key">cdn</span>
+              <s class="map-row__from">Fastly / yours</s>
+              <span class="map-row__arrow" aria-hidden="true">→</span>
+              <span class="visually-hidden">becomes</span>
+              <span class="map-row__to">Fastly</span>
+            </li>
+            <li class="map-row">
+              <span class="map-row__key">deploy</span>
+              <s class="map-row__from">any Git CI</s>
+              <span class="map-row__arrow" aria-hidden="true">→</span>
+              <span class="visually-hidden">becomes</span>
+              <span class="map-row__to">git push hooks</span>
+            </li>
+          </ul>
+          <figcaption class="code-card__foot">
+            <span class="tok-ok">✓ parity 2,418 / 2,418</span><span>visual diff 0.0%</span><span>rollback armed</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- §01 The tooling -->
+    <section class="section section--clip" aria-labelledby="tooling-heading">
+      <div class="container container--pb-88">
+        <div class="section-mark" aria-hidden="true">
+          <span class="section-mark__rule" data-rule></span>
+          <span class="section-mark__label">§01 / the tooling</span>
+          <span class="section-mark__dot"></span>
+        </div>
+        <div class="split split--pt">
+          <figure class="media-frame" data-reveal="left">
+            <!-- Replace the placeholder with a real screenshot, e.g.
+                 <img src="images/parity-report.png" alt="Parity report showing every URL matched between platforms"> -->
+            <div class="media-frame__placeholder" aria-hidden="true">Screenshot: parity report or migration dashboard</div>
+          </figure>
+          <div class="stack" data-reveal="right">
+            <p class="eyebrow">§ Why it goes smoothly</p>
+            <h2 class="section-title section-title--md section-title--w20" id="tooling-heading">I automated the parts that usually go wrong</h2>
+            <p class="body-text body-text--58">Most migrations fail on details: a hard-coded amazee.io path, a cron job nobody documented, one page template that renders differently. My tooling finds those before launch day, not after.</p>
+            <ul class="plus-list plus-list--roomy">
+              <li><strong>Config translation</strong> — .lagoon.yml rewritten to .upsun/config.yaml, with every change listed for review</li>
+              <li><strong>Content parity checks</strong> — every URL crawled on both platforms, compared for status, redirects, and markup</li>
+              <li><strong>Visual regression</strong> — screenshots of key pages diffed side-by-side, down to the pixel</li>
+              <li><strong>Rehearsed cutovers</strong> — database and files synced and launched on Upsun repeatedly until the run is predictable</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contrast-cards">
+          <section class="contrast-card" aria-labelledby="leaving-heading" data-reveal>
+            <h3 class="contrast-card__title" id="leaving-heading">What I untangle from amazee.io</h3>
+            <ul class="mark-list">
+              <li>Docker images and docker-compose services to re-express</li>
+              <li>amazee.io env vars baked into settings.php</li>
+              <li>Per-branch environments that need a new home</li>
+            </ul>
+          </section>
+          <section class="contrast-card contrast-card--new" aria-labelledby="arriving-heading" data-reveal>
+            <h3 class="contrast-card__title" id="arriving-heading">What you get on Upsun</h3>
+            <ul class="mark-list mark-list--plus">
+              <li>Services, routes and workers as config-as-code</li>
+              <li>Preview environments cloned from production data</li>
+              <li>Resources sized per environment, billed on usage</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- §02 Use case -->
+    <section class="section section--alt section--clip" aria-labelledby="case-heading">
+      <div class="bg-lines bg-lines--tall" data-par="0.3" aria-hidden="true"></div>
+      <div class="container container--pb-88">
+        <div class="section-mark" aria-hidden="true">
+          <span class="section-mark__rule" data-rule></span>
+          <span class="section-mark__label">§02 / use case</span>
+          <span class="section-mark__dot"></span>
+        </div>
+        <div class="section-head section-head--lg" data-reveal>
+          <p class="eyebrow">§ Regional university network · 38 Drupal sites</p>
+          <h2 class="section-title section-title--md section-title--w24" id="case-heading">38 sites off amazee.io in 11 weeks, with nobody noticing</h2>
+        </div>
+        <div class="split split--top">
+          <div class="stack stack--18" data-reveal="left">
+            <p class="body-text">Renewal pricing on amazee.io had doubled, and the in-house team wanted local environments that actually matched production. The catch: admissions season started in three months, and a broken application form was not an option.</p>
+            <p class="body-text">We grouped the sites into four waves by risk. Each wave was translated, parity-tested and rehearsed on Upsun twice before its cutover window. The admissions site went last, on a Sunday at 6am, and took nine minutes.</p>
+            <figure class="terminal-log">
+              <figcaption># wave 4 / admissions.example.edu</figcaption>
+              <ol>
+                <li>06:00:04  freeze content · sync db + files</li>
+                <li>06:04:31  parity 412 / 412 · visual diff 0.0%</li>
+                <li>06:07:12  dns + cdn switched to Upsun</li>
+                <li class="terminal-log__ok">06:09:02  green · rollback window open 72h</li>
+              </ol>
+            </figure>
+          </div>
+          <dl class="stat-grid" data-reveal="right">
+            <div class="stat"><dt>sites migrated</dt><dd>38</dd></div>
+            <div class="stat"><dt>unplanned downtime</dt><dd>0 min</dd></div>
+            <div class="stat"><dt>automated checks per run</dt><dd>9,600</dd></div>
+            <div class="stat stat--accent"><dt>annual hosting cost</dt><dd>−41%</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- §03 Testimonials -->
+    <section class="section" aria-labelledby="quotes-heading">
+      <div class="container container--pb-88">
+        <div class="section-mark" aria-hidden="true">
+          <span class="section-mark__rule" data-rule></span>
+          <span class="section-mark__label">§03 / testimonials</span>
+          <span class="section-mark__dot"></span>
+        </div>
+        <div class="section-head section-head--lg" data-reveal>
+          <p class="eyebrow">§ From the people who signed off</p>
+          <h2 class="section-title section-title--md section-title--w24" id="quotes-heading">Quiet launches, in their words</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote" data-reveal>
+            <blockquote><p>“The parity report was the first time I've seen a vendor prove a migration worked instead of just saying it did. Our editors didn't notice we'd moved.”</p></blockquote>
+            <figcaption><span class="quote__name">Dana Whitfield</span><span class="quote__role">Director of Web, regional university</span></figcaption>
+          </figure>
+          <figure class="quote" data-reveal>
+            <blockquote><p>“We'd been quoted six months by an agency. It took ten weeks, and my team came out of it actually understanding Upsun.”</p></blockquote>
+            <figcaption><span class="quote__name">Marco Ruiz</span><span class="quote__role">Engineering Lead, healthcare nonprofit</span></figcaption>
+          </figure>
+          <figure class="quote" data-reveal>
+            <blockquote><p>“Every question got answered by the person doing the work. Cutover night was the calmest deploy we've ever had, which is exactly what I wanted.”</p></blockquote>
+            <figcaption><span class="quote__name">Priya Natarajan</span><span class="quote__role">CTO, B2B publishing group</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--dark" aria-labelledby="contact-heading">
+      <div class="bg-grid bg-grid--cta" data-par="0.3" aria-hidden="true"></div>
+      <div class="cta cta--dark">
+        <div class="cta__main" data-reveal>
+          <h2 class="cta__title" id="contact-heading">Ready to leave amazee.io?</h2>
+          <p class="cta__lede">Send the repo, or just a site count. On a 30-minute call I'll tell you what moves cleanly to Upsun, what needs work, and roughly how long it takes.</p>
+        </div>
+        <div class="cta__side" data-reveal>
+          <a class="btn btn--bright btn--wide" href="mailto:hello@teqqr.com">
+            <span>Book a call</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <ul class="status-row status-row--dark">
+            <li class="status-row__live">Taking work for Q4</li>
+            <li>NDA on request</li>
+            <li>EN / ES</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="more-links" aria-labelledby="more-heading">
+    <h2 class="more-links__title" id="more-heading">Other migrations</h2>
+    <ul class="more-links__list">
+      <li><a href="migration-acquia-to-pantheon.html">Acquia → Pantheon</a></li>
+      <li><a href="migration-acquia-to-amazee.html">Acquia → amazee.io</a></li>
+      <li><a href="migration-acquia-to-upsun.html">Acquia → Upsun</a></li>
+      <li><a href="migration-acquia-to-other.html">Acquia → Other</a></li>
+      <li><a href="migration-pantheon-to-acquia.html">Pantheon → Acquia</a></li>
+      <li><a href="migration-pantheon-to-amazee.html">Pantheon → amazee.io</a></li>
+      <li><a href="migration-pantheon-to-upsun.html">Pantheon → Upsun</a></li>
+      <li><a href="migration-pantheon-to-other.html">Pantheon → Other</a></li>
+      <li><a href="migration-amazee-to-acquia.html">amazee.io → Acquia</a></li>
+      <li><a href="migration-amazee-to-pantheon.html">amazee.io → Pantheon</a></li>
+      <li><a href="migration-amazee-to-other.html">amazee.io → Other</a></li>
+      <li><a href="migration-upsun-to-acquia.html">Upsun → Acquia</a></li>
+      <li><a href="migration-upsun-to-pantheon.html">Upsun → Pantheon</a></li>
+      <li><a href="migration-upsun-to-amazee.html">Upsun → amazee.io</a></li>
+      <li><a href="migration-upsun-to-other.html">Upsun → Other</a></li>
+      <li><a href="migration-other-to-acquia.html">Other → Acquia</a></li>
+      <li><a href="migration-other-to-pantheon.html">Other → Pantheon</a></li>
+      <li><a href="migration-other-to-amazee.html">Other → amazee.io</a></li>
+      <li><a href="migration-other-to-upsun.html">Other → Upsun</a></li>
+    </ul>
+  </nav>
+
+  <footer class="site-footer">
+    <p>teqqr.com — amazee.io → Upsun migrations</p>
+    <p>Costa Rica · EN / ES · UTC−6</p>
+  </footer>
+</div>
+</body>
+</html>
