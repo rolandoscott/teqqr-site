@@ -111,9 +111,7 @@
         </div>
         <div class="split split--pt">
           <figure class="media-frame" data-reveal="left">
-            <!-- Replace the placeholder with a real screenshot, e.g.
-                 <img src="images/parity-report.png" alt="Parity report showing every URL matched between platforms"> -->
-            <div class="media-frame__placeholder" aria-hidden="true">Screenshot: parity report or migration dashboard</div>
+            <img src="images/parity-report.svg" width="800" height="600" loading="lazy" decoding="async" alt="Illustration of a migration parity report: 2,418 URLs checked on the old and new platform, every status code and redirect matching, and 0.0% visual difference.">
           </figure>
           <div class="stack" data-reveal="right">
             <p class="eyebrow">§ Why it goes smoothly</p>
@@ -149,49 +147,12 @@
       </div>
     </section>
 
-    <!-- §02 Use case -->
-    <section class="section section--alt section--clip" aria-labelledby="case-heading">
-      <div class="bg-lines bg-lines--tall" data-par="0.3" aria-hidden="true"></div>
+    <!-- §02 Testimonials -->
+    <section class="section section--alt" aria-labelledby="quotes-heading">
       <div class="container container--pb-88">
         <div class="section-mark" aria-hidden="true">
           <span class="section-mark__rule" data-rule></span>
-          <span class="section-mark__label">§02 / use case</span>
-          <span class="section-mark__dot"></span>
-        </div>
-        <div class="section-head section-head--lg" data-reveal>
-          <p class="eyebrow">§ Regional university network · 38 Drupal sites</p>
-          <h2 class="section-title section-title--md section-title--w24" id="case-heading">38 sites off Upsun in 11 weeks, with nobody noticing</h2>
-        </div>
-        <div class="split split--top">
-          <div class="stack stack--18" data-reveal="left">
-            <p class="body-text">Renewal pricing on Upsun had doubled, and the in-house team wanted local environments that actually matched production. The catch: admissions season started in three months, and a broken application form was not an option.</p>
-            <p class="body-text">We grouped the sites into four waves by risk. Each wave was translated, parity-tested and rehearsed on Pantheon twice before its cutover window. The admissions site went last, on a Sunday at 6am, and took nine minutes.</p>
-            <figure class="terminal-log">
-              <figcaption># wave 4 / admissions.example.edu</figcaption>
-              <ol>
-                <li>06:00:04  freeze content · sync db + files</li>
-                <li>06:04:31  parity 412 / 412 · visual diff 0.0%</li>
-                <li>06:07:12  dns + cdn switched to Pantheon</li>
-                <li class="terminal-log__ok">06:09:02  green · rollback window open 72h</li>
-              </ol>
-            </figure>
-          </div>
-          <dl class="stat-grid" data-reveal="right">
-            <div class="stat"><dt>sites migrated</dt><dd>38</dd></div>
-            <div class="stat"><dt>unplanned downtime</dt><dd>0 min</dd></div>
-            <div class="stat"><dt>automated checks per run</dt><dd>9,600</dd></div>
-            <div class="stat stat--accent"><dt>annual hosting cost</dt><dd>−41%</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- §03 Testimonials -->
-    <section class="section" aria-labelledby="quotes-heading">
-      <div class="container container--pb-88">
-        <div class="section-mark" aria-hidden="true">
-          <span class="section-mark__rule" data-rule></span>
-          <span class="section-mark__label">§03 / testimonials</span>
+          <span class="section-mark__label">§02 / testimonials</span>
           <span class="section-mark__dot"></span>
         </div>
         <div class="section-head section-head--lg" data-reveal>
@@ -229,7 +190,7 @@
             <span class="btn__arrow" aria-hidden="true">→</span>
           </a>
           <ul class="status-row status-row--dark">
-            <li class="status-row__live">Taking work for Q4</li>
+            <li class="status-row__live">Taking work for <span data-current-quarter>this quarter</span></li>
             <li>NDA on request</li>
             <li>EN / ES</li>
           </ul>

@@ -467,6 +467,17 @@
     }));
   }
 
+  /* ---- "Taking work for Q_": always show the upcoming quarter ----------- */
+  // The HTML says "this quarter" so it never goes stale without JavaScript.
+  // Looks two weeks ahead, so the last couple of weeks of a quarter already
+  // advertise the next one (e.g. "Q4" from mid-September).
+  function setupQuarter() {
+    const LEAD_DAYS = 14;
+    const ahead = new Date(Date.now() + LEAD_DAYS * 24 * 60 * 60 * 1000);
+    const quarter = "Q" + (Math.floor(ahead.getMonth() / 3) + 1);
+    $$("[data-current-quarter]").forEach(el => { el.textContent = quarter; });
+  }
+
   /* ---- boot ------------------------------------------------------------ */
   setupHeader();
   setupReveal();
@@ -479,5 +490,6 @@
   setupPhaseTabs();
   setupCaseStudy();
   setupFaq();
+  setupQuarter();
   scrollFns.forEach(fn => fn());
 })();

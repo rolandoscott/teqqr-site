@@ -104,6 +104,7 @@
             <span class="marquee__item">WordPress</span>
             <span class="marquee__item">Kubernetes</span>
             <span class="marquee__item">Cloudflare</span>
+            <span class="marquee__item">Model Context Protocol</span>
             <span class="marquee__item">Acquia</span>
             <span class="marquee__item">Pantheon.io</span>
             <span class="marquee__item">Upsun</span>
@@ -114,9 +115,10 @@
             <span class="marquee__item">WordPress</span>
             <span class="marquee__item">Kubernetes</span>
             <span class="marquee__item">Cloudflare</span>
+            <span class="marquee__item">Model Context Protocol</span>
           </div>
         </div>
-        <p class="visually-hidden">Platforms and tools I work with: Acquia, Pantheon.io, Upsun, amazee.io, Fastly, Signal Sciences, Drupal, WordPress, Kubernetes and Cloudflare.</p>
+        <p class="visually-hidden">Platforms and tools I work with: Acquia, Pantheon.io, Upsun, amazee.io, Fastly, Signal Sciences, Drupal, WordPress, Kubernetes, Cloudflare and the Model Context Protocol.</p>
       </div>
     </section>
 
@@ -256,17 +258,18 @@
                   <p class="stage__label">P2 / AI</p>
                   <h3 class="stage__title">AI implementation &amp; advisory</h3>
                   <div class="term-card" aria-hidden="true">
-                    <span class="term-card__comment"># answer-first search</span>
-                    <span><span class="term-card__prompt">POST</span> <span data-type>/v1/answer</span></span>
-                    <span class="term-card__indent">"index": "nodes:104k",</span>
-                    <span class="term-card__indent">"cite": true</span>
+                    <span class="term-card__comment"># mcp server · cms tools</span>
+                    <span><span class="term-card__prompt">tool</span> <span data-type>search_content</span></span>
+                    <span class="term-card__indent">"scope": "read-only",</span>
+                    <span class="term-card__indent">"audit_log": true</span>
                   </div>
                 </div>
                 <div class="stage__side stage__side--detail" data-reveal="right">
-                  <p class="stage__lede">Most AI projects stall on governance, not capability, or ship as a bolt-on nobody trusts. I build AI features grounded in your actual content and systems. For enterprise teams, I also speak the governance language that gets AI past security review.</p>
+                  <p class="stage__lede">Most AI projects stall on governance, not capability, or ship as a bolt-on nobody trusts. I build AI features or agents grounded in your actual content and systems. For enterprise teams, I also speak the governance language that gets AI past security review.</p>
                   <ul class="plus-list plus-list--hover">
-                    <li>AI-powered, answer-first search, built for a site with 100k+ nodes</li>
+                    <li>AI-powered search that answers visitors' questions directly from your content, even on very large sites</li>
                     <li>AI chat and assistants trained on your own docs and content</li>
+                    <li>Model Context Protocol (MCP) servers that connect AI tools like Claude and ChatGPT to your CMS, data and internal systems, with permissions you control</li>
                     <li>AI gateway and governance architecture: model routing, access control, and usage management across providers, including hands-on work with the amazee.io AI Gateway</li>
                   </ul>
                 </div>
@@ -284,17 +287,19 @@
                   <p class="stage__label">P3 / Maintenance</p>
                   <h3 class="stage__title">Ongoing maintenance &amp; support</h3>
                   <div class="term-card" aria-hidden="true">
-                    <span class="term-card__comment"># retainer, monthly window</span>
-                    <span><span class="term-card__prompt">cron</span> <span data-type>0 3 * * * updates.sh</span></span>
+                    <span class="term-card__comment"># monthly window · staging first</span>
+                    <span><span class="term-card__prompt">$</span> <span data-type>drush pm:security</span></span>
+                    <span class="term-card__comment">→ 3 updates · visual diff 0.0%</span>
                     <span class="term-card__comment">→ uptime 99.99%</span>
                   </div>
                 </div>
                 <div class="stage__side stage__side--detail" data-reveal="right">
                   <p class="stage__lede">Migrations and AI builds end. Websites don't stop needing attention the day after launch. I keep platforms secure, updated, and fast long after the big project wraps.</p>
                   <ul class="plus-list plus-list--hover">
-                    <li>Hundreds of websites maintained at ~99.99% uptime</li>
-                    <li>Core, module, and plugin updates across Drupal and WordPress, with security patches applied before they're urgent</li>
-                    <li>Performance optimization and hacked-site recovery</li>
+                    <li>Uptime, error and security monitoring, with alerts that reach me, not a shared inbox</li>
+                    <li>Core, module, and plugin updates across Drupal, WordPress and custom apps, tested on a copy of your site with the same visual regression checks I use for migrations before they reach production</li>
+                    <li>Major version upgrades (Drupal core, WordPress, PHP) planned and run like small migrations</li>
+                    <li>Performance optimization, security hardening and hacked-site recovery</li>
                     <li>Retainer tiers available: a senior technical contact on an ongoing plan, not a ticket queue</li>
                   </ul>
                 </div>
@@ -315,46 +320,46 @@
         </div>
         <div class="case">
           <div class="stack" data-reveal>
-            <p class="eyebrow">fig. 01 · multi-site platform migration</p>
-            <h2 class="section-title section-title--case section-title--w20" id="case-heading">Lorem ipsum dolor sit amet platform</h2>
+            <p class="eyebrow">multi-site platform migration</p>
+            <h2 class="section-title section-title--case section-title--w20" id="case-heading">148 sites moved in eight weeks, with zero downtime</h2>
 
             <div class="phase-tabs" role="tablist" aria-label="Project phases" data-phase-tabs>
               <button type="button" class="phase-tab" role="tab" id="phase-tab-1" aria-controls="phase-panel-1" aria-selected="true">
-                <span class="phase-tab__n">01 · wk 1–2</span>
+                <span class="phase-tab__n">01 · wk 1–3</span>
                 <span class="phase-tab__t">Audit</span>
               </button>
               <button type="button" class="phase-tab" role="tab" id="phase-tab-2" aria-controls="phase-panel-2" aria-selected="false" tabindex="-1">
-                <span class="phase-tab__n">02 · wk 3–5</span>
+                <span class="phase-tab__n">02 · wk 4–8</span>
                 <span class="phase-tab__t">Cutover</span>
               </button>
               <button type="button" class="phase-tab" role="tab" id="phase-tab-3" aria-controls="phase-panel-3" aria-selected="false" tabindex="-1">
-                <span class="phase-tab__n">03 · wk 6+</span>
+                <span class="phase-tab__n">03 · wk 8+</span>
                 <span class="phase-tab__t">After</span>
               </button>
             </div>
 
             <div class="phase-stack" data-phase-stack>
               <div class="phase-panel is-active" role="tabpanel" id="phase-panel-1" aria-labelledby="phase-tab-1" tabindex="0">
-                <h3 class="phase-panel__title">01 · wk 1–2 · Audit</h3>
-                <p class="phase-panel__lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco.</p>
+                <h3 class="phase-panel__title">01 · wk 1–3 · Audit</h3>
+                <p class="phase-panel__lede">Before anything moved, every site was inventoried and scored for risk. Most of the estate was standard, but a handful of sites carried custom modules, hard-coded paths and integrations nobody had documented.</p>
                 <ul class="plus-list">
-                  <li>Lorem ipsum content inventory across 148 properties</li>
-                  <li>Duis aute irure dependency and module audit</li>
-                  <li>Excepteur sint risk register with rollback criteria</li>
+                  <li>Content, traffic and integration inventory across all 148 sites</li>
+                  <li>Module, dependency and custom-code audit, with every blocker flagged early</li>
+                  <li>Risk register with rollback criteria agreed before the first cutover</li>
                 </ul>
               </div>
               <div class="phase-panel" role="tabpanel" id="phase-panel-2" aria-labelledby="phase-tab-2" tabindex="0">
-                <h3 class="phase-panel__title">02 · wk 3–5 · Cutover</h3>
-                <p class="phase-panel__lede">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor.</p>
+                <h3 class="phase-panel__title">02 · wk 4–8 · Cutover</h3>
+                <p class="phase-panel__lede">Sites moved in four waves, lowest risk first. Each wave was rehearsed on a production clone until the run was predictable, then cut over in a scheduled overnight window with the old platform kept warm for rollback.</p>
                 <ul class="plus-list">
                   <li>Four waves, each rehearsed on a production clone</li>
-                  <li>DNS and cache warmed ahead of the switch</li>
-                  <li>Zero-downtime database sync at the final window</li>
+                  <li>DNS TTLs lowered and caches warmed ahead of each switch</li>
+                  <li>Final database sync and file rsync inside the cutover window, with no downtime</li>
                 </ul>
               </div>
               <div class="phase-panel" role="tabpanel" id="phase-panel-3" aria-labelledby="phase-tab-3" tabindex="0">
-                <h3 class="phase-panel__title">03 · wk 6+ · After</h3>
-                <p class="phase-panel__lede">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.</p>
+                <h3 class="phase-panel__title">03 · wk 8+ · After</h3>
+                <p class="phase-panel__lede">Launch day wasn't the finish line. The in-house team took over with documentation written for them, monitoring already in place, and support through their first releases on the new platform.</p>
                 <ul class="plus-list">
                   <li>Runbooks handed to the in-house team</li>
                   <li>Observability and alerting left in their accounts</li>
@@ -369,7 +374,7 @@
               <div class="metric"><dt>Downtime</dt><dd><span data-count="0">0</span>s</dd></div>
               <div class="metric"><dt>Sites moved</dt><dd><span data-count="148">148</span></dd></div>
               <div class="metric"><dt>Build time</dt><dd><span data-count="62" data-prefix="−">−62</span>%</dd></div>
-              <div class="metric"><dt>Window</dt><dd><span data-count="6">6</span> wks</dd></div>
+              <div class="metric"><dt>Window</dt><dd><span data-count="8">8</span> wks</dd></div>
             </dl>
 
             <div class="log" data-log>
@@ -380,7 +385,8 @@
               <ol class="log__list">
                 <li class="log__line" data-log-line><time class="log__time">02:00:04</time><span class="log__msg">freeze writes on legacy estate</span></li>
                 <li class="log__line" data-log-line><time class="log__time">02:06:31</time><span class="log__msg">drush sql:sync @legacy @lagoon</span></li>
-                <li class="log__line" data-log-line><time class="log__time">02:41:09</time><span class="log__msg">reindex solr · 104k nodes</span></li>
+                <li class="log__line" data-log-line><time class="log__time">02:19:47</time><span class="log__msg">drush rsync @legacy:%files @lagoon:%files</span></li>
+                <li class="log__line" data-log-line><time class="log__time">02:41:09</time><span class="log__msg">reindex search · wave 4 sites</span></li>
                 <li class="log__line" data-log-line><time class="log__time">03:12:55</time><span class="log__msg">dns ttl 60s, fastly purge all</span></li>
                 <li class="log__line" data-log-line><time class="log__time">03:14:02</time><span class="log__msg log__msg--ok">cutover complete · 0s downtime</span></li>
               </ol>
@@ -388,9 +394,9 @@
 
             <figure class="quote-card">
               <blockquote>
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.”</p>
+                <p>“148 sites in eight weeks, and our editors never noticed the move. The runbooks meant my team owned the new platform from day one.”</p>
               </blockquote>
-              <figcaption>Name, Title, Organization</figcaption>
+              <figcaption>Director of Digital Platforms</figcaption>
             </figure>
           </div>
         </div>
@@ -410,7 +416,7 @@
           <p class="eyebrow eyebrow--on-dark">§ Direct engagement</p>
           <h2 class="section-title" id="why-heading">Why work with me directly</h2>
           <p class="why__lede">You hire an agency and get a project manager, a rotating bench, and a discovery phase billed at senior rates. You hire me and get the engineer who plans the work, ships it, and answers for it afterwards.</p>
-          <p class="why__meta">principal engineer &nbsp;·&nbsp; 20+ years &nbsp;·&nbsp; based in Costa Rica &nbsp;·&nbsp; EN / ES</p>
+          <p class="why__meta">principal engineer &nbsp;·&nbsp; 20+ years experience &nbsp;·&nbsp; currently based in Costa Rica &nbsp;·&nbsp; EN / ES</p>
         </div>
 
         <ol class="rule-grid rule-grid--why">
@@ -424,11 +430,11 @@
           </li>
           <li data-reveal>
             <span class="why__n" aria-hidden="true">03</span>
-            <p class="why__text">I've done the client-facing side too: documentation, training, and managing a nervous stakeholder through a technical transition.</p>
+            <p class="why__text">I take care of the client-facing side too: documentation, training, and managing a nervous stakeholder through a technical transition.</p>
           </li>
           <li data-reveal>
             <span class="why__n" aria-hidden="true">04</span>
-            <p class="why__text">Based in Costa Rica, fluent in English and Spanish, comfortable working with US, EU, and LatAm teams.</p>
+            <p class="why__text">Based in Costa Rica, fluent in English and Spanish, comfortable working with US, EU, and LatAm teams and timezones.</p>
           </li>
         </ol>
 
@@ -537,7 +543,7 @@
           <div class="faq__aside" data-reveal>
             <p class="eyebrow">§ Before you ask</p>
             <h2 class="section-title section-title--faq section-title--w14" id="faq-heading">The questions that come up first</h2>
-            <p class="faq__intro">Five things people ask on the first call. If yours isn't here, it's a good first email.</p>
+            <p class="faq__intro">Straight answers to what most people want to know before we start. Anything not covered here, just ask.</p>
             <div class="note-card">
               <p class="note-card__label">Still unsure</p>
               <p class="note-card__text">Bring the messy version of the problem. Half of these calls end with me telling you it's smaller than you think.</p>
@@ -620,7 +626,7 @@
         </div>
         <div class="cta">
           <div class="cta__main" data-reveal>
-            <h2 class="cta__title" id="contact-heading">Have a site, or a hundred of them, that needs looking after?</h2>
+            <h2 class="cta__title" id="contact-heading">Have a site, or a hundred of them, that need looking after?</h2>
             <p class="cta__lede">Migration, upgrade, AI build, or just someone accountable for keeping it alive. A 30-minute technical call costs you nothing, and you talk to the engineer, not a salesperson.</p>
             <div class="cta__actions">
               <!-- Swap this href for your booking link (Cal.com, Calendly, …) when you have one -->
@@ -631,7 +637,7 @@
               <a class="text-link text-link--lg" href="mailto:hello@teqqr.com">hello@teqqr.com</a>
             </div>
             <ul class="status-row">
-              <li class="status-row__live">Taking work for Q4</li>
+              <li class="status-row__live">Taking work for <span data-current-quarter>this quarter</span></li>
               <li>Replies within one business day</li>
               <li>UTC−6 · overlaps EU mornings, US all day</li>
             </ul>
@@ -639,8 +645,18 @@
 
           <div class="cta__aside" data-reveal>
             <div class="info-card">
-              <p class="info-card__label">How it starts</p>
+              <h3 class="info-card__label">How it starts</h3>
               <p class="info-card__text">No deck, no discovery invoice. If it turns out you don't need me, I'll tell you on the call.</p>
+            </div>
+            <div class="info-card">
+              <h3 class="info-card__label">What to send</h3>
+              <p class="info-card__text">A few lines is plenty. Rough answers are fine:</p>
+              <ul class="mark-list mark-list--plus">
+                <li>The site URL, or a rough count if there are many</li>
+                <li>Where it's hosted today</li>
+                <li>What's going wrong, or what you want to change</li>
+                <li>Any deadline you're working against</li>
+              </ul>
             </div>
             <ul class="tag-row">
               <li>NDA on request</li>
