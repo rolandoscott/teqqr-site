@@ -1,5 +1,5 @@
 /*
- * teqqr — site behaviour.
+ * teqqr: site behaviour.
  *
  * Everything here is progressive enhancement: the pages are fully readable
  * without JavaScript. Styling lives in style.css; this file only toggles

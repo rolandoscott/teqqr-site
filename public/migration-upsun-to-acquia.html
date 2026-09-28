@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Upsun to Acquia migration — teqqr</title>
+  <title>Upsun to Acquia migration | teqqr</title>
   <meta name="description" content="Zero-downtime Upsun to Acquia migrations for Drupal and WordPress, with automated config translation, content parity checks and visual regression testing.">
   <meta name="theme-color" content="#0e1628">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e1628'/%3E%3Cpolyline points='11,9 19,16 11,23' fill='none' stroke='%235aa6ff' stroke-width='3.4' stroke-linecap='square'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -48,7 +48,7 @@
             <span class="hero__line hero__line--dim"><span>rehearsed until</span></span>
             <span class="hero__line hero__line--dim"><span>it's second nature.</span></span>
           </h1>
-          <p class="hero__lede">I've moved Drupal and WordPress estates off Upsun more times than I can count — so I built tooling that does the risky, repetitive parts automatically and proves the new site matches the old one before anyone touches DNS.</p>
+          <p class="hero__lede">I've moved Drupal and WordPress estates off Upsun more times than I can count, so I built tooling that does the risky, repetitive parts automatically and proves the new site matches the old one before anyone touches DNS.</p>
           <div class="hero__actions">
             <a class="btn btn--bright" href="#contact">Plan my migration</a>
             <p class="hero__note">30 min · bring your repo URL</p>
@@ -120,10 +120,10 @@
             <h2 class="section-title section-title--md section-title--w20" id="tooling-heading">I automated the parts that usually go wrong</h2>
             <p class="body-text body-text--58">Most migrations fail on details: a hard-coded Upsun path, a cron job nobody documented, one page template that renders differently. My tooling finds those before launch day, not after.</p>
             <ul class="plus-list plus-list--roomy">
-              <li><strong>Config translation</strong> — .upsun/config.yaml rewritten to BLT + Cloud Hooks, with every change listed for review</li>
-              <li><strong>Content parity checks</strong> — every URL crawled on both platforms, compared for status, redirects, and markup</li>
-              <li><strong>Visual regression</strong> — screenshots of key pages diffed side-by-side, down to the pixel</li>
-              <li><strong>Rehearsed cutovers</strong> — database and files synced and launched on Acquia repeatedly until the run is predictable</li>
+              <li><strong>Config translation:</strong> .upsun/config.yaml rewritten to BLT + Cloud Hooks, with every change listed for review</li>
+              <li><strong>Content parity checks:</strong> every URL crawled on both platforms, compared for status, redirects, and markup</li>
+              <li><strong>Visual regression:</strong> screenshots of key pages diffed side-by-side, down to the pixel</li>
+              <li><strong>Rehearsed cutovers:</strong> database and files synced and launched on Acquia repeatedly until the run is predictable</li>
             </ul>
           </div>
         </div>
@@ -264,7 +264,7 @@
   </nav>
 
   <footer class="site-footer">
-    <p>teqqr.com — Upsun → Acquia migrations</p>
+    <p>teqqr.com · Upsun → Acquia migrations</p>
     <p>Costa Rica · EN / ES · UTC−6</p>
   </footer>
 </div>

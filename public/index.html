@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>teqqr — platform migrations, AI, and maintenance</title>
+  <title>teqqr | platform migrations, AI, and maintenance</title>
   <meta name="description" content="Enterprise-grade Drupal and WordPress support from one accountable engineer: zero-downtime platform migrations, AI implementation, and ongoing maintenance.">
   <meta name="theme-color" content="#0e1628">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e1628'/%3E%3Cpolyline points='11,9 19,16 11,23' fill='none' stroke='%235aa6ff' stroke-width='3.4' stroke-linecap='square'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -53,7 +53,7 @@
           <div class="hero__copy">
             <p class="hero__kicker">
               <span class="pulse-dot" aria-hidden="true"></span>
-              <span>One accountable engineer, a lean team in support, zero agency layer.</span>
+              <span>One accountable engineer, zero agency layer.</span>
             </p>
             <h1 class="hero__title" id="hero-title">
               <span class="hero__line"><span>Enterprise-grade</span></span>
@@ -62,7 +62,7 @@
               <span class="hero__line hero__line--dim"><span>and the maintenance</span></span>
               <span class="hero__line hero__line--dim"><span>in between.</span></span>
             </h1>
-            <p class="hero__lede">I help organizations move, secure, and keep running complex Drupal and WordPress sites — one, or a few hundred — from one-time migrations to AI implementation to the ongoing maintenance most hosts and agencies phone in. No junior handoffs: you work directly with the person who does the work.</p>
+            <p class="hero__lede">I help organizations move, secure, and keep running complex Drupal, WordPress and custom sites and apps, whether that's one site or a few hundred. The work ranges from one-time migrations to AI implementation to the ongoing maintenance most hosts and agencies phone in. No junior handoffs: you work directly with the person who does the work.</p>
             <div class="hero__actions">
               <a class="btn btn--bright" href="#contact">Book a technical consult</a>
               <p class="hero__note">30 min · no scope required</p>
@@ -76,17 +76,18 @@
               <span class="code-card__lights"><span></span><span></span><span></span></span>
             </div>
             <div class="code-card__body">
-              <div class="code-line"><span class="code-line__n">01</span><span class="code-line__c"><span class="tok-key">platform</span>: lagoon   <span class="tok-comment"># or acquia | pantheon | platform.sh</span></span></div>
+              <div class="code-line"><span class="code-line__n">01</span><span class="code-line__c"><span class="tok-key">platform</span>: amazee.io <span class="tok-comment"># or acquia, pantheon or upsun</span></span></div>
               <div class="code-line"><span class="code-line__n">02</span><span class="code-line__c"><span class="tok-key">downtime_budget</span>: <span class="tok-ok">0s</span></span></div>
               <div class="code-line"><span class="code-line__n">03</span><span class="code-line__c"><span class="tok-key">rollback</span>: armed</span></div>
               <div class="code-line"><span class="code-line__n">04</span><span class="code-line__c"><span class="tok-key">waves</span>:</span></div>
               <div class="code-line"><span class="code-line__n">05</span><span class="code-line__c">  - low_risk_sites:  <span class="tok-ok">complete</span></span></div>
               <div class="code-line"><span class="code-line__n">06</span><span class="code-line__c">  - core_platform:   <span class="tok-warn">running</span></span></div>
               <div class="code-line"><span class="code-line__n">07</span><span class="code-line__c">  - cdn_waf_cutover: queued</span></div>
-              <div class="code-line"><span class="code-line__n">08</span><span class="code-line__c"><span class="tok-key">owner</span>: "the person you actually hired"<span class="code-caret"></span></span></div>
+              <div class="code-line"><span class="code-line__n">08</span><span class="code-line__c"><span class="tok-key">engineer</span>: one, start to finish</span></div>
+              <div class="code-line"><span class="code-line__n">09</span><span class="code-line__c"><span class="tok-key">owned_by</span>: you   <span class="tok-comment"># accounts, repos, runbooks</span><span class="code-caret"></span></span></div>
             </div>
             <div class="code-card__foot">
-              <span>uptime ~99.99%</span><span>10+ yrs</span><span>100k+ nodes indexed</span>
+              <span>wave 2 of 3 running</span><span class="tok-ok">✓ parity 2,418 / 2,418</span><span>visual diff 0.0%</span>
             </div>
           </div>
         </div>
@@ -95,27 +96,27 @@
           <div class="marquee__track">
             <span class="marquee__item">Acquia</span>
             <span class="marquee__item">Pantheon.io</span>
-            <span class="marquee__item">Platform.sh</span>
-            <span class="marquee__item">Lagoon</span>
+            <span class="marquee__item">Upsun</span>
+            <span class="marquee__item">amazee.io</span>
             <span class="marquee__item">Fastly</span>
             <span class="marquee__item">Signal Sciences</span>
             <span class="marquee__item">Drupal</span>
             <span class="marquee__item">WordPress</span>
             <span class="marquee__item">Kubernetes</span>
-            <span class="marquee__item">amazee.io AI Gateway</span>
+            <span class="marquee__item">Cloudflare</span>
             <span class="marquee__item">Acquia</span>
             <span class="marquee__item">Pantheon.io</span>
-            <span class="marquee__item">Platform.sh</span>
-            <span class="marquee__item">Lagoon</span>
+            <span class="marquee__item">Upsun</span>
+            <span class="marquee__item">amazee.io</span>
             <span class="marquee__item">Fastly</span>
             <span class="marquee__item">Signal Sciences</span>
             <span class="marquee__item">Drupal</span>
             <span class="marquee__item">WordPress</span>
             <span class="marquee__item">Kubernetes</span>
-            <span class="marquee__item">amazee.io AI Gateway</span>
+            <span class="marquee__item">Cloudflare</span>
           </div>
         </div>
-        <p class="visually-hidden">Platforms and tools I work with: Acquia, Pantheon.io, Platform.sh, Lagoon, Fastly, Signal Sciences, Drupal, WordPress, Kubernetes and the amazee.io AI Gateway.</p>
+        <p class="visually-hidden">Platforms and tools I work with: Acquia, Pantheon.io, Upsun, amazee.io, Fastly, Signal Sciences, Drupal, WordPress, Kubernetes and Cloudflare.</p>
       </div>
     </section>
 
@@ -130,24 +131,24 @@
         </div>
         <div class="section-head section-head--track" data-reveal>
           <p class="eyebrow">§ Track record</p>
-          <h2 class="section-title section-title--sm section-title--w30" id="track-heading">Receipts, not a capabilities deck</h2>
+          <h2 class="section-title section-title--sm section-title--w30" id="track-heading">Recent receipts, not a capabilities deck</h2>
         </div>
         <ul class="rule-grid">
           <li data-reveal>
             <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--plane"></span><span class="record__num">01</span></span>
-            <p class="record__text">Led an <strong>enterprise-scale platform migration</strong> for a Fortune 500 aerospace manufacturer</p>
+            <p class="record__text">Led an <strong>enterprise-scale platform migration</strong> for a Fortune 500 aerospace manufacturer, from the first audit through final cutover, working alongside their security and infrastructure teams</p>
           </li>
           <li data-reveal>
-            <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--server"></span><span class="record__num">02</span></span>
-            <p class="record__text">Maintained hundreds of websites at <strong>~99.99% uptime</strong> — performance work and hacked-site recovery included</p>
+            <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--stethoscope"></span><span class="record__num">02</span></span>
+            <p class="record__text">Took over, maintained and optimized the websites of a <strong>national healthcare association</strong> whose members oversee drug benefits for 300 million Americans</p>
           </li>
           <li data-reveal>
-            <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--drupal"></span><span class="record__num">03</span></span>
-            <p class="record__text"><strong>20+ years</strong> across Drupal, WordPress, containerized hosting, and enterprise infrastructure</p>
+            <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--sparkles"></span><span class="record__num">03</span></span>
+            <p class="record__text">Rebuilt the site of a <strong>CEO-backed women's leadership organization</strong>, swapping a stack of paid WordPress plugins for one free site builder: lower monthly costs, and editors who can update pages on their own</p>
           </li>
           <li data-reveal>
             <span class="record__head" aria-hidden="true"><span class="record__icon icon icon--bot"></span><span class="record__num">04</span></span>
-            <p class="record__text">Built answer-first AI search for a <strong>100k+ node site</strong>, plus chatbot and gateway work</p>
+            <p class="record__text">Built answer-first AI search for a <strong>100k+ page news site</strong>, giving visitors direct answers drawn from the site's own content, plus custom chatbots and AI gateway integrations</p>
           </li>
         </ul>
       </div>
@@ -207,9 +208,9 @@
                   </div>
                 </div>
                 <div class="stage__side stage__side--detail" data-reveal="right">
-                  <p class="stage__lede">You've outgrown your current host, or you're stuck paying enterprise prices for infrastructure that still feels fragile. I handle the move — planning, execution, and the unglamorous parts most people skip.</p>
+                  <p class="stage__lede">You've outgrown your current host, or you're stuck paying enterprise prices for infrastructure that still feels fragile. I handle the move: planning, execution, and the unglamorous parts most people skip.</p>
                   <ul class="plus-list plus-list--hover">
-                    <li>Acquia, Pantheon.io, Platform.sh, Lagoon, or any container-based host</li>
+                    <li>Acquia, Pantheon.io, Upsun, amazee.io, or any container-based host</li>
                     <li>Full migration planning, wave execution, and team training so your devs aren't relying on me forever</li>
                     <li>Zero-downtime approach for organizations where a failed migration isn't an option</li>
                   </ul>
@@ -262,11 +263,11 @@
                   </div>
                 </div>
                 <div class="stage__side stage__side--detail" data-reveal="right">
-                  <p class="stage__lede">Most AI projects stall on governance, not capability, or ship as a bolt-on nobody trusts. I build AI features grounded in your actual content and systems — and for enterprise teams, I speak the governance language that gets AI past security review.</p>
+                  <p class="stage__lede">Most AI projects stall on governance, not capability, or ship as a bolt-on nobody trusts. I build AI features grounded in your actual content and systems. For enterprise teams, I also speak the governance language that gets AI past security review.</p>
                   <ul class="plus-list plus-list--hover">
-                    <li>AI-powered, answer-first search — built for a site with 100k+ nodes</li>
+                    <li>AI-powered, answer-first search, built for a site with 100k+ nodes</li>
                     <li>AI chat and assistants trained on your own docs and content</li>
-                    <li>AI gateway and governance architecture — model routing, access control, and usage management across providers, including hands-on work with the amazee.io AI Gateway</li>
+                    <li>AI gateway and governance architecture: model routing, access control, and usage management across providers, including hands-on work with the amazee.io AI Gateway</li>
                   </ul>
                 </div>
               </div>
@@ -292,9 +293,9 @@
                   <p class="stage__lede">Migrations and AI builds end. Websites don't stop needing attention the day after launch. I keep platforms secure, updated, and fast long after the big project wraps.</p>
                   <ul class="plus-list plus-list--hover">
                     <li>Hundreds of websites maintained at ~99.99% uptime</li>
-                    <li>Core, module, and plugin updates across Drupal and WordPress — security patches applied before they're urgent</li>
+                    <li>Core, module, and plugin updates across Drupal and WordPress, with security patches applied before they're urgent</li>
                     <li>Performance optimization and hacked-site recovery</li>
-                    <li>Retainer tiers available — a senior technical contact on an ongoing plan, not a ticket queue</li>
+                    <li>Retainer tiers available: a senior technical contact on an ongoing plan, not a ticket queue</li>
                   </ul>
                 </div>
               </div>
@@ -314,7 +315,7 @@
         </div>
         <div class="case">
           <div class="stack" data-reveal>
-            <p class="eyebrow">fig. 01 — multi-site platform migration</p>
+            <p class="eyebrow">fig. 01 · multi-site platform migration</p>
             <h2 class="section-title section-title--case section-title--w20" id="case-heading">Lorem ipsum dolor sit amet platform</h2>
 
             <div class="phase-tabs" role="tablist" aria-label="Project phases" data-phase-tabs>
@@ -334,7 +335,7 @@
 
             <div class="phase-stack" data-phase-stack>
               <div class="phase-panel is-active" role="tabpanel" id="phase-panel-1" aria-labelledby="phase-tab-1" tabindex="0">
-                <h3 class="phase-panel__title">01 · wk 1–2 — Audit</h3>
+                <h3 class="phase-panel__title">01 · wk 1–2 · Audit</h3>
                 <p class="phase-panel__lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco.</p>
                 <ul class="plus-list">
                   <li>Lorem ipsum content inventory across 148 properties</li>
@@ -343,7 +344,7 @@
                 </ul>
               </div>
               <div class="phase-panel" role="tabpanel" id="phase-panel-2" aria-labelledby="phase-tab-2" tabindex="0">
-                <h3 class="phase-panel__title">02 · wk 3–5 — Cutover</h3>
+                <h3 class="phase-panel__title">02 · wk 3–5 · Cutover</h3>
                 <p class="phase-panel__lede">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, duis aute irure dolor.</p>
                 <ul class="plus-list">
                   <li>Four waves, each rehearsed on a production clone</li>
@@ -352,7 +353,7 @@
                 </ul>
               </div>
               <div class="phase-panel" role="tabpanel" id="phase-panel-3" aria-labelledby="phase-tab-3" tabindex="0">
-                <h3 class="phase-panel__title">03 · wk 6+ — After</h3>
+                <h3 class="phase-panel__title">03 · wk 6+ · After</h3>
                 <p class="phase-panel__lede">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis.</p>
                 <ul class="plus-list">
                   <li>Runbooks handed to the in-house team</li>
@@ -379,7 +380,7 @@
               <ol class="log__list">
                 <li class="log__line" data-log-line><time class="log__time">02:00:04</time><span class="log__msg">freeze writes on legacy estate</span></li>
                 <li class="log__line" data-log-line><time class="log__time">02:06:31</time><span class="log__msg">drush sql:sync @legacy @lagoon</span></li>
-                <li class="log__line" data-log-line><time class="log__time">02:41:09</time><span class="log__msg">reindex solr — 104k nodes</span></li>
+                <li class="log__line" data-log-line><time class="log__time">02:41:09</time><span class="log__msg">reindex solr · 104k nodes</span></li>
                 <li class="log__line" data-log-line><time class="log__time">03:12:55</time><span class="log__msg">dns ttl 60s, fastly purge all</span></li>
                 <li class="log__line" data-log-line><time class="log__time">03:14:02</time><span class="log__msg log__msg--ok">cutover complete · 0s downtime</span></li>
               </ol>
@@ -389,7 +390,7 @@
               <blockquote>
                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.”</p>
               </blockquote>
-              <figcaption>— Name, Title, Organization</figcaption>
+              <figcaption>Name, Title, Organization</figcaption>
             </figure>
           </div>
         </div>
@@ -408,22 +409,22 @@
         <div class="why__head" data-reveal>
           <p class="eyebrow eyebrow--on-dark">§ Direct engagement</p>
           <h2 class="section-title" id="why-heading">Why work with me directly</h2>
-          <p class="why__lede">You hire an agency and get a project manager, a rotating bench, and a discovery phase billed at senior rates. You hire me and get the engineer who does the work — planning it, shipping it, and answering for it afterwards.</p>
-          <p class="why__meta">principal engineer &nbsp;·&nbsp; based in Costa Rica &nbsp;·&nbsp; EN / ES</p>
+          <p class="why__lede">You hire an agency and get a project manager, a rotating bench, and a discovery phase billed at senior rates. You hire me and get the engineer who plans the work, ships it, and answers for it afterwards.</p>
+          <p class="why__meta">principal engineer &nbsp;·&nbsp; 20+ years &nbsp;·&nbsp; based in Costa Rica &nbsp;·&nbsp; EN / ES</p>
         </div>
 
         <ol class="rule-grid rule-grid--why">
           <li data-reveal>
             <span class="why__n" aria-hidden="true">01</span>
-            <p class="why__text">I've done this at a scale most consultants haven't — enterprise migrations with real complexity, real stakeholders, and real downtime risk.</p>
+            <p class="why__text">I've done this at a scale most consultants haven't: enterprise migrations with real complexity, real stakeholders, and real downtime risk.</p>
           </li>
           <li data-reveal>
             <span class="why__n" aria-hidden="true">02</span>
-            <p class="why__text">I sit at the intersection most people don't: infrastructure, application, and security — the seams where things actually break.</p>
+            <p class="why__text">I sit at the intersection most people don't: infrastructure, application, and security. Those seams are where things actually break.</p>
           </li>
           <li data-reveal>
             <span class="why__n" aria-hidden="true">03</span>
-            <p class="why__text">I've done the client-facing side too — documentation, training, and managing a nervous stakeholder through a technical transition.</p>
+            <p class="why__text">I've done the client-facing side too: documentation, training, and managing a nervous stakeholder through a technical transition.</p>
           </li>
           <li data-reveal>
             <span class="why__n" aria-hidden="true">04</span>
@@ -446,7 +447,7 @@
                 <span class="cmp-vs" aria-hidden="true">VS</span>
               </div>
               <div class="cmp-cell cmp-cell--b cmp-cell--head" role="columnheader">
-                <span class="cmp-head-label">Direct — teqqr</span>
+                <span class="cmp-head-label">Direct · teqqr</span>
                 <span class="cmp-head-title">Straight to the engineer</span>
               </div>
             </div>
@@ -474,13 +475,13 @@
             <div class="compare__row compare__row--data" role="row">
               <div class="cmp-cell cmp-cell--a" role="cell"><span class="cmp-key" aria-hidden="true">after launch</span><span class="cmp-text">a new SOW and a new discovery</span><span class="cmp-mark cmp-mark--no" aria-hidden="true">✕</span></div>
               <div class="cmp-axis" role="rowheader"><span class="cmp-axis__key">after launch</span></div>
-              <div class="cmp-cell cmp-cell--b" role="cell"><span class="cmp-mark cmp-mark--yes" aria-hidden="true">✓</span><span class="cmp-key" aria-hidden="true">after launch</span><span class="cmp-text">retainer, or nothing — your call</span></div>
+              <div class="cmp-cell cmp-cell--b" role="cell"><span class="cmp-mark cmp-mark--yes" aria-hidden="true">✓</span><span class="cmp-key" aria-hidden="true">after launch</span><span class="cmp-text">retainer or nothing, your call</span></div>
             </div>
 
             <div class="compare__row" role="row">
               <div class="cmp-cell cmp-cell--a cmp-cell--foot" role="cell"><span class="cmp-foot">≈ 40% of spend reaches an engineer</span></div>
               <div class="cmp-axis cmp-axis--foot" role="rowheader"><span class="visually-hidden">Share of spend</span><span class="cmp-axis__dot" aria-hidden="true">·</span></div>
-              <div class="cmp-cell cmp-cell--b cmp-cell--foot" role="cell"><span class="cmp-foot">100% — you are paying for the build</span></div>
+              <div class="cmp-cell cmp-cell--b cmp-cell--foot" role="cell"><span class="cmp-foot">100% of spend goes into the build</span></div>
             </div>
           </div>
         </div>
@@ -503,7 +504,7 @@
           <li class="step" data-reveal>
             <div class="step__meta"><span class="step__n" aria-hidden="true">01</span><span class="step__time">30 min</span></div>
             <h3 class="step__title">Call</h3>
-            <p class="step__text">You describe what you run and what is going wrong. I tell you what I think it actually is — including when the answer is "you don't need me for this."</p>
+            <p class="step__text">You describe what you run and what is going wrong. I tell you what I think it actually is, including when the answer is "you don't need me for this."</p>
           </li>
           <li class="step" data-reveal>
             <div class="step__meta"><span class="step__n" aria-hidden="true">02</span><span class="step__time">3–5 days</span></div>
@@ -513,7 +514,7 @@
           <li class="step" data-reveal>
             <div class="step__meta"><span class="step__n" aria-hidden="true">03</span><span class="step__time">agreed window</span></div>
             <h3 class="step__title">Build</h3>
-            <p class="step__text">I do the work and you can see it happening — staging you can click, commits you can read, a weekly note that fits in one screen.</p>
+            <p class="step__text">I do the work and you can see it happening: staging you can click, commits you can read, a weekly note that fits in one screen.</p>
           </li>
           <li class="step" data-reveal>
             <div class="step__meta"><span class="step__n" aria-hidden="true">04</span><span class="step__time">ongoing or not</span></div>
@@ -553,7 +554,7 @@
                 <span class="faq-item__mark" aria-hidden="true">+</span>
               </summary>
               <div class="faq-item__body">
-                <p>If you need ten people in parallel, hire an agency — genuinely. For a migration, an AI build, or keeping a site healthy, most of what an agency adds is coordination overhead for work one experienced engineer does faster alone.</p>
+                <p>If you need ten people in parallel, hire an agency. Genuinely. For a migration, an AI build, or keeping a site healthy, most of what an agency adds is coordination overhead for work one experienced engineer does faster alone.</p>
                 <p class="faq-item__note">↳ see §04 / direct engagement</p>
               </div>
             </details>
@@ -577,7 +578,7 @@
                 <span class="faq-item__mark" aria-hidden="true">+</span>
               </summary>
               <div class="faq-item__body">
-                <p>Usually, yes. I am most often the person who does the part your team does not want to own — the migration, the infrastructure, the AI piece — while they keep shipping features.</p>
+                <p>Usually, yes. I am most often the person who takes on the part your team does not want to own, such as the migration, the infrastructure, or the AI piece, while they keep shipping features.</p>
               </div>
             </details>
             <details class="faq-item" name="faq">
@@ -619,7 +620,7 @@
         </div>
         <div class="cta">
           <div class="cta__main" data-reveal>
-            <h2 class="cta__title" id="contact-heading">Have a site — or a hundred of them — that needs looking after?</h2>
+            <h2 class="cta__title" id="contact-heading">Have a site, or a hundred of them, that needs looking after?</h2>
             <p class="cta__lede">Migration, upgrade, AI build, or just someone accountable for keeping it alive. A 30-minute technical call costs you nothing, and you talk to the engineer, not a salesperson.</p>
             <div class="cta__actions">
               <!-- Swap this href for your booking link (Cal.com, Calendly, …) when you have one -->
@@ -652,7 +653,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>teqqr.com — solo infrastructure, AI, and maintenance practice</p>
+    <p>teqqr.com · solo infrastructure, AI, and maintenance practice</p>
     <p>Costa Rica · EN / ES · UTC−6</p>
   </footer>
 </div>
