@@ -478,6 +478,12 @@
     $$("[data-current-quarter]").forEach(el => { el.textContent = quarter; });
   }
 
+  /* ---- footer copyright year ------------------------------------------ */
+  function setupYear() {
+    const year = String(new Date().getFullYear());
+    $$("[data-year]").forEach(el => { el.textContent = year; });
+  }
+
   /* ---- boot ------------------------------------------------------------ */
   setupHeader();
   setupReveal();
@@ -491,5 +497,6 @@
   setupCaseStudy();
   setupFaq();
   setupQuarter();
+  setupYear();
   scrollFns.forEach(fn => fn());
 })();

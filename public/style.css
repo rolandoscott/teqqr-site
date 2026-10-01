@@ -1602,6 +1602,9 @@ summary::-webkit-details-marker { display: none; }
   color: var(--muted);
 }
 .site-footer p { margin: 0; }
+.site-footer a { color: inherit; text-underline-offset: 3px; }
+.site-footer a:hover,
+.site-footer a:focus-visible { color: var(--link); }
 
 .more-links {
   max-width: 1180px;
