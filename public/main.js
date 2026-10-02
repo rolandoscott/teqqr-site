@@ -478,6 +478,16 @@
     $$("[data-current-quarter]").forEach(el => { el.textContent = quarter; });
   }
 
+  /* ---- 404 page: show the path that was requested ---------------------- */
+  function setupCurrentPath() {
+    const els = $$("[data-current-path]");
+    if (!els.length) return;
+    let path = location.pathname;
+    try { path = decodeURI(path); } catch (e) { /* keep the raw path */ }
+    if (path.length > 60) path = path.slice(0, 57) + "...";
+    els.forEach(el => { el.textContent = path; });
+  }
+
   /* ---- footer copyright year ------------------------------------------ */
   function setupYear() {
     const year = String(new Date().getFullYear());
@@ -498,5 +508,6 @@
   setupFaq();
   setupQuarter();
   setupYear();
+  setupCurrentPath();
   scrollFns.forEach(fn => fn());
 })();

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rolando Scott">
+  <meta name="robots" content="noindex">
+  <title>Page not found | teqqr</title>
+  <meta name="theme-color" content="#0e1628">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e1628'/%3E%3Cpolyline points='11,9 19,16 11,23' fill='none' stroke='%235aa6ff' stroke-width='3.4' stroke-linecap='square'/%3E%3C/svg%3E">
+  <!-- This page is served for missing URLs at any depth (e.g. /a/b/c),
+       so every asset and link uses a root-absolute path. -->
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-mono-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="page">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/" aria-label="teqqr home">
+        <span class="brand__prompt" aria-hidden="true">❯</span><span>teqqr</span><span class="brand__caret" aria-hidden="true"></span>
+      </a>
+      <nav class="site-header__actions" aria-label="Primary">
+        <a class="header-link" href="/#migrations">All migrations</a>
+        <a class="header-cta" href="/#contact">Book a consult</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page__main hero hero--404" tabindex="-1" aria-labelledby="hero-title">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-dots" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__kicker">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Error 404 · page not found</span>
+        </p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span>Nothing here<span class="hero__punct">,</span></span></span>
+          <span class="hero__line hero__line--dim"><span>but everything else</span></span>
+          <span class="hero__line hero__line--dim"><span>is still up.</span></span>
+        </h1>
+        <p class="hero__lede">The page <code class="hero__path" data-current-path>you asked for</code> doesn't exist. It may have moved, or the link may have a typo. The rest of the site is running fine.</p>
+        <div class="hero__actions">
+          <a class="btn btn--bright" href="/">Back to the homepage</a>
+          <a class="hero__link" href="/#migrations">See all migrations</a>
+        </div>
+      </div>
+
+      <!-- Decorative "request.log" window -->
+      <div class="code-card" aria-hidden="true">
+        <div class="code-card__bar">
+          <span>request.log</span>
+          <span class="code-card__lights"><span></span><span></span><span></span></span>
+        </div>
+        <div class="code-card__body">
+          <div class="code-line"><span class="code-line__n">01</span><span class="code-line__c"><span class="tok-key">GET</span> <span data-current-path>/this-page</span></span></div>
+          <div class="code-line"><span class="code-line__n">02</span><span class="code-line__c"><span class="tok-key">status</span>: <span class="tok-warn">404 not found</span></span></div>
+          <div class="code-line"><span class="code-line__n">03</span><span class="code-line__c"><span class="tok-key">cause</span>: moved, renamed, or never existed</span></div>
+          <div class="code-line"><span class="code-line__n">04</span><span class="code-line__c"><span class="tok-key">site</span>: <span class="tok-ok">up</span>   <span class="tok-comment"># nothing else is broken</span></span></div>
+          <div class="code-line"><span class="code-line__n">05</span><span class="code-line__c"><span class="tok-key">next</span>: teqqr.com<span class="code-caret"></span></span></div>
+        </div>
+        <div class="code-card__foot">
+          <span class="tok-ok">✓ uptime unaffected</span><span>rollback not required</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year>2026</span> Rolando Scott · teqqr.com</p>
+    <p>Costa Rica · EN / ES · UTC−6 · <a href="https://www.linkedin.com/in/rolandoscott/" rel="me">LinkedIn</a></p>
+  </footer>
+</div>
+</body>
+</html>

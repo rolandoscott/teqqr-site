@@ -1,9 +1,11 @@
 {
   // Must match the project/Worker name shown in the Cloudflare dashboard.
-  "name": "teqqr",
+  "name": "teqqr-site",
   "compatibility_date": "2026-09-27",
   // Plain static site: everything in public/ is served as-is, no build step.
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    // Unknown URLs get public/404.html with a real 404 status.
+    "not_found_handling": "404-page"
   }
 }
