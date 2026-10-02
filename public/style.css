@@ -400,6 +400,12 @@ summary::-webkit-details-marker { display: none; }
 .header-link:focus-visible,
 .header-link[aria-current="page"] { opacity: 1; color: var(--bright); }
 
+/* Inner pages put "All migrations" straight in the header. On narrow phones it
+   wraps onto two lines, so drop it there (the logo still links home). */
+@media (max-width: 439.98px) {
+  .site-header__actions > .header-link { display: none; }
+}
+
 .header-cta {
   font-family: var(--font-mono);
   font-size: 12.5px;
@@ -409,6 +415,7 @@ summary::-webkit-details-marker { display: none; }
   border: 1px solid var(--bright);
   padding: 8px 14px;
   transition: background 140ms linear, color 140ms linear;
+  white-space: nowrap;
 }
 .header-cta:hover,
 .header-cta:focus-visible { background: var(--bright); color: var(--dark-ink); }
@@ -1967,3 +1974,86 @@ summary::-webkit-details-marker { display: none; }
 
 /* Brand names that must keep their own casing inside uppercase labels (e.g. amazee.io) */
 .brand-name { text-transform: none; }
+
+/* --------------------------------------------------------------------------
+   23. Booking dialog (Cal.com calendar, opened by [data-cal-open] buttons)
+   -------------------------------------------------------------------------- */
+html:has(.cal-dialog[open]) { overflow: hidden; }
+
+.cal-dialog {
+  width: min(1000px, calc(100vw - 32px));
+  height: min(780px, calc(100dvh - 32px));
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 30px 80px oklch(0.1 0.04 258 / 0.45);
+}
+.cal-dialog[open] { display: flex; flex-direction: column; }
+.cal-dialog::backdrop {
+  background: oklch(0.155 0.03 258 / 0.72);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.cal-dialog__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px 12px 20px;
+  border-bottom: 1px solid var(--line-2);
+}
+.cal-dialog__title { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+.cal-dialog__close {
+  appearance: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 20px;
+  line-height: 1;
+  transition: border-color 140ms linear, background 140ms linear;
+}
+.cal-dialog__close:hover,
+.cal-dialog__close:focus-visible { border-color: var(--accent-line); background: var(--accent-soft); }
+
+.cal-dialog__body { position: relative; flex: 1; min-height: 0; overflow: auto; }
+.cal-dialog__embed { width: 100%; height: 100%; }
+.cal-dialog__loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.cal-dialog.is-ready .cal-dialog__loading { display: none; }
+
+.cal-dialog__fallback {
+  margin: 0;
+  padding: 10px 20px;
+  border-top: 1px solid var(--line-2);
+  font-size: 13px;
+  color: var(--text-5);
+}
+
+/* full screen on phones */
+@media (max-width: 600px) {
+  .cal-dialog {
+    width: 100vw;
+    height: 100dvh;
+    border: 0;
+  }
+}

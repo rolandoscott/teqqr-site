@@ -488,6 +488,73 @@
     els.forEach(el => { el.textContent = path; });
   }
 
+  /* ---- "Book a consult": Cal.com calendar in an accessible modal ------- */
+  // Every booking button is a plain link to the Cal.com page, so it still
+  // works without JavaScript (or with Ctrl/Cmd-click). With JavaScript, a
+  // normal click opens a native <dialog> instead: the browser traps focus,
+  // closes it on Esc and hands focus back to the button. Cal.com's script is
+  // only downloaded the first time the dialog opens.
+  function setupBooking() {
+    const triggers = $$("[data-cal-open]");
+    if (!triggers.length || typeof HTMLDialogElement !== "function") return;
+
+    const CAL_LINK = "teqqr/technical-consult";
+    const CAL_NS = "technical-consult";
+    let dialog = null;
+    let calLoaded = false;
+
+    const build = () => {
+      dialog = document.createElement("dialog");
+      dialog.className = "cal-dialog";
+      dialog.setAttribute("aria-labelledby", "cal-dialog-title");
+      dialog.innerHTML =
+        '<div class="cal-dialog__head">' +
+          '<h2 class="cal-dialog__title" id="cal-dialog-title">Book a technical consult</h2>' +
+          '<button type="button" class="cal-dialog__close" aria-label="Close booking calendar"><span aria-hidden="true">×</span></button>' +
+        '</div>' +
+        '<div class="cal-dialog__body">' +
+          '<p class="cal-dialog__loading" role="status">Loading calendar…</p>' +
+          '<div class="cal-dialog__embed" id="cal-inline-technical-consult"></div>' +
+        '</div>' +
+        '<p class="cal-dialog__fallback">Calendar not loading? <a href="https://cal.com/' + CAL_LINK + '" target="_blank" rel="noopener">Open it in a new tab</a> or email <a href="mailto:hello@teqqr.com">hello@teqqr.com</a>.</p>';
+      document.body.appendChild(dialog);
+
+      $(".cal-dialog__close", dialog).addEventListener("click", () => dialog.close());
+      // clicking the dimmed backdrop (outside the panel) also closes it
+      dialog.addEventListener("click", e => { if (e.target === dialog) dialog.close(); });
+    };
+
+    const loadCal = () => {
+      if (calLoaded) return;
+      calLoaded = true;
+      /* Cal.com embed loader, as provided by Cal.com */
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      const Cal = window.Cal;
+      Cal("init", CAL_NS, { origin: "https://app.cal.com" });
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns[CAL_NS]("inline", {
+        elementOrSelector: "#cal-inline-technical-consult",
+        config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
+        calLink: CAL_LINK
+      });
+      Cal.ns[CAL_NS]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+      Cal.ns[CAL_NS]("on", {
+        action: "linkReady",
+        callback: () => dialog.classList.add("is-ready")
+      });
+    };
+
+    triggers.forEach(t => t.addEventListener("click", e => {
+      // let new-tab / new-window clicks go to the Cal.com page as normal
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      if (!dialog) build();
+      dialog.showModal();
+      loadCal();
+    }));
+  }
+
   /* ---- footer copyright year ------------------------------------------ */
   function setupYear() {
     const year = String(new Date().getFullYear());
@@ -509,5 +576,6 @@
   setupQuarter();
   setupYear();
   setupCurrentPath();
+  setupBooking();
   scrollFns.forEach(fn => fn());
 })();
